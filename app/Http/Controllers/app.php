@@ -16,8 +16,7 @@ class app extends Controller
     function beranda() {
         $listMenu = menu::with('menutype')->paginate(5);
         $menuCount = menu::count();
-        $menu = menuType::orderBy('type', 'asc');
-        return view('beranda', compact('listMenu', 'menuCount', 'menu'));
+        return view('beranda', compact('listMenu', 'menuCount'));
     }
 
     function addMenu() {

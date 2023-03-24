@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menu_type', function (Blueprint $table) {
+        Schema::create('menuType', function (Blueprint $table) {
             $table->id();
             $table->string('type', 50);
             $table->timestamps();

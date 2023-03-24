@@ -10,8 +10,7 @@ class menuType extends Model
     use HasFactory;
     protected $table = "menuType";
     protected $primaryKey = "id";
-    protected $fillable = [
-        'id','type'];
+    protected $fillable = ['type'];
 
     public function menu() {
         return $this->hasMany(menu::class);
