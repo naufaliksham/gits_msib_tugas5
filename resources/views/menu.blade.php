@@ -44,8 +44,7 @@
                         </th>
                         <th scope="row"
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ $item->menuType->type }}
-                        </th>
+                            {{ $menu->type }}
                         <td class="px-6 py-4">
                             {{ $item->description }}
                         </td>

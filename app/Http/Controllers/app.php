@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\menu;
+use App\Models\menuType;
 use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class app extends Controller
     function beranda() {
         $listMenu = menu::with('menutype')->paginate(5);
         $menuCount = menu::count();
-        return view('beranda', compact('listMenu', 'menuCount'));
+        $menu = menuType::orderBy('type', 'asc');
+        return view('beranda', compact('listMenu', 'menuCount', 'menu'));
     }
 
     function addMenu() {
